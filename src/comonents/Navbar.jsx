@@ -1,12 +1,29 @@
-import { Link } from "react-router-dom";
+import "./Navbar.css"; 
+import { Link, NavLink } from "react-router-dom";
+import colorTheme from "../colorTheme.jsx";
 
 function Navbar() {
   return (
-    <nav className="Navbar">
+    <nav className="Navbar" style={{ background: colorTheme.primary }}>
       <ul>
-        <Link to="/"> Home </Link>
-        <Link to="/board"> Board </Link>
-        <Link to="/about"> About </Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "selected" : "")}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/board"
+          className={({ isActive }) => (isActive ? "selected" : "")}
+        >
+          Kanban Board
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "selected" : "")}
+        >
+          About
+        </NavLink>
       </ul>
     </nav>
   );
