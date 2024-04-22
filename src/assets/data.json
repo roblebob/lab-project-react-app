@@ -6,7 +6,9 @@
             "card1 comment 1",
             "card1 comment 2",
             "card1 comment 3"
-        ]
+        ],
+        "status": "Backlog"
+
     },
     {
         "_id": "2",
@@ -15,7 +17,8 @@
             "card2 comment 1",
             "card2 comment 2",
             "card2 comment 3"
-        ]
+        ],
+        "status": "Backlog"
     },
     {
         "_id": "3",
@@ -24,6 +27,7 @@
             "card3 comment 1",
             "card3 comment 2",
             "card3 comment 3"
-        ]
+        ],
+        "status": "Backlog"
     }   
 ]

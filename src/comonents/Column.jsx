@@ -1,14 +1,17 @@
 import "./Column.css";
+import ItemCard from "./ItemCard";
 
-const Column = ({ children, name, color }) => {
-    console.log("screen width", screen.width);
+const Column = ({ data, name, color }) => {
+  console.log("data", data);
   return (
     <div
       className="Column"
       style={{ backgroundColor: color }}
     >
       <h2>{name}</h2>
-      {children}
+      {data.map((item) => (
+        <ItemCard item={item}/>
+      ))}
     </div>
   );
 };
