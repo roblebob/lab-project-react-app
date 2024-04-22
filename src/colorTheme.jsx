@@ -1,4 +1,4 @@
-export const colorTheme = {
+const colorTheme = {
     backlog: "#f48897",
     doing: "#f4e688",
     review: "#88f48e",
@@ -9,4 +9,4 @@ export const colorTheme = {
 
 }
 
- 
+export default colorTheme;

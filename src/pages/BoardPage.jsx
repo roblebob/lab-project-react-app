@@ -2,6 +2,8 @@ import "./BoardPage.css";
 import Column from "../comonents/Column";
 import colorTheme  from "../colorTheme.jsx";
 
+
+
 const BoardPage = () => {
   return (
     <div className="Board"> 
