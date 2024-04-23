@@ -1,0 +1,14 @@
+.ItemCard {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 80%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}

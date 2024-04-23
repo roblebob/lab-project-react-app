@@ -22,7 +22,7 @@ function Navbar() {
           to="/about"
           className={({ isActive }) => (isActive ? "selected" : "")}
         >
-          About
+          About Us
         </NavLink>
       </ul>
     </nav>
