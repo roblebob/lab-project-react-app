@@ -7,11 +7,10 @@ const Column = ({ data, name, color, submitCard, deleteCard }) => {
       _id: Math.ceil(Math.random() * 1000),
       title: "New Card",
       status: name,
-      comment: [],
+      comments: []
     });
   };
 
-  console.log("data", data);
   return (
     <div className="Column" style={{ backgroundColor: color }}>
       <h2>{name}</h2>;
