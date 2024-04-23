@@ -8,10 +8,7 @@ const ItemCard = ({ item, deleteCard }) => {
         src="src/assets/garbage.png"
         alt="delete"
         style={{ width: "20px", position: "relative", left: "90%" }}
-        onClick={() => {
-          console.log("delete", item._id, deleteCard);
-          deleteCard(item._id);
-        }}
+        onClick={() => deleteCard(item._id)}
       />
 
       <h1>{item.title}</h1>

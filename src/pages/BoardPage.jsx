@@ -7,7 +7,7 @@ import { useState } from "react";
 const BoardPage = () => {
   const [data, setData] = useState(dataDefault);
 
-  const submitCard = (item) => setData([...data, item]);
+  const addCard = (item) => setData([...data, item]);
   const deleteCard = (id) => setData(data.filter((item) => item._id !== id));
 
   return (
@@ -20,28 +20,28 @@ const BoardPage = () => {
           name="Backlog"
           color={colorTheme.backlog}
           data={data.filter((item) => item.status === "Backlog")}
-          submitCard={submitCard}
+          addCard={addCard}
           deleteCard={deleteCard}
         />
         <Column
           name="Doing"
           color={colorTheme.doing}
           data={data.filter((item) => item.status === "Doing")}
-          submitCard={submitCard}
+          addCard={addCard}
           deleteCard={deleteCard}
         />
         <Column
           name="Review"
           color={colorTheme.review}
           data={data.filter((item) => item.status === "Review")}
-          submitCard={submitCard}
+          addCard={addCard}
           deleteCard={deleteCard}
         />
         <Column
           name="Done"
           color={colorTheme.done}
           data={data.filter((item) => item.status === "Done")}
-          submitCard={submitCard}
+          addCard={addCard}
           deleteCard={deleteCard}
         />
       </div>
