@@ -14,8 +14,12 @@ const BoardPage = () => {
     setData([...data, item]);
   };
   const deleteCard = (id) => setData(data.filter((item) => item._id !== id));
-  const update = (id, newStatus) =>
-    setData((data.filter((item) => item._id === id)["status"] = newStatus));
+ 
+  const edit = (id) => {
+    const content = document.querySelector(`.ItemCardInputTextArea${id}`).value;
+    const obj = data.find((item) => item._id === id);
+    obj.content = content;
+  };
 
   return (
     <div className="Board">
@@ -29,6 +33,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Backlog")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
         <Column
           name="Doing"
