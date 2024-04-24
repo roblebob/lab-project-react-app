@@ -3,12 +3,19 @@ import Column from "../comonents/Column";
 import colorTheme from "../colorTheme.jsx";
 import dataDefault from "../assets/defaultData.json";
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const BoardPage = () => {
   const [data, setData] = useState(dataDefault);
 
-  const addCard = (item) => setData([...data, item]);
+  const addCard = (item) => {
+    item = { ...item, _id: uuidv4() };
+    console.log(item);
+    setData([...data, item]);
+  };
   const deleteCard = (id) => setData(data.filter((item) => item._id !== id));
+  const update = (id, newStatus) =>
+    setData((data.filter((item) => item._id === id)["status"] = newStatus));
 
   return (
     <div className="Board">
