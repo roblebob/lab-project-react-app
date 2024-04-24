@@ -1,4 +1,6 @@
 import "./ItemCard.css";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const ItemCard = ({ item, deleteCard }) => {
   return (
@@ -11,15 +13,8 @@ const ItemCard = ({ item, deleteCard }) => {
         onClick={() => deleteCard(item._id)}
       />
 
-      <h1>{item.title}</h1>
-      <div className="ItemCardCommentsContainer">
-        {item.comments.map((comment, index) => {
-          return (
-            <div key={comment + index}>
-              <p>{comment}</p>
-            </div>
-          );
-        })}
+      <div className="ItemCardContent" style={{ textAlign: "left" }}>
+        <Markdown remarkPlugins={[remarkGfm]}>{item.content}</Markdown>
       </div>
     </div>
   );

@@ -1,33 +1,17 @@
 [
-    {
-        "_id": "1",
-        "title": "card1",
-        "comments": [
-            "card1 comment 1",
-            "card1 comment 2",
-            "card1 comment 3"
-        ],
-        "status": "Backlog"
-
-    },
-    {
-        "_id": "2",
-        "title": "card2",
-        "comments": [
-            "card2 comment 1",
-            "card2 comment 2",
-            "card2 comment 3"
-        ],
-        "status": "Backlog"
-    },
-    {
-        "_id": "3",
-        "title": "card3",
-        "comments": [
-            "card3 comment 1",
-            "card3 comment 2",
-            "card3 comment 3"
-        ],
-        "status": "Backlog"
-    }
+  {
+    "_id": "1",
+    "content": "# Hallo \n world \n * eh \n * eh",
+    "status": "Backlog"
+  },
+  {
+    "_id": "2",
+    "content": "# Hallo \n world \n * eh \n * eh",
+    "status": "Backlog"
+  },
+  {
+    "_id": "3",
+    "content": "# Hallo \n world \n * eh \n * eh",
+    "status": "Backlog"
+  }
 ]

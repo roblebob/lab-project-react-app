@@ -1,13 +1,13 @@
 import "./Column.css";
+import { v4 as uuidv4 } from 'uuid';
 import ItemCard from "./ItemCard";
 
 const Column = ({ data, name, color, addCard, deleteCard }) => {
   const submitCard = () => {
     addCard({
-      _id: Math.ceil(Math.random() * 1000),
-      title: "New Card",
+      _id: uuidv4(), 
       status: name,
-      comments: [],
+      content: "",
     });
   };
 
