@@ -8,15 +8,12 @@ import { v4 as uuidv4 } from "uuid";
 const BoardPage = () => {
   const [data, setData] = useState(dataDefault);
 
-  const addCard = (item) => {
-    item = { ...item, _id: uuidv4() };
-    console.log(item);
-    setData([...data, item]);
-  };
+  const addCard = (item) => setData([...data, item]);
+  
   const deleteCard = (id) => setData(data.filter((item) => item._id !== id));
- 
-  const edit = (id) => {
-    const content = document.querySelector(`.ItemCardInputTextArea${id}`).value;
+
+  const edit = (id, content) => {
+    //const content = document.querySelector(`.ItemCardInputTextArea${id}`).value;
     const obj = data.find((item) => item._id === id);
     obj.content = content;
   };
