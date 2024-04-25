@@ -7,10 +7,18 @@ import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 
 import { Routes, Route } from "react-router-dom";
+import Footer from "./comonents/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      minHeight: "100vh",
+    }}
+    >
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -19,6 +27,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

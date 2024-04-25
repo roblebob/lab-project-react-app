@@ -1,17 +1,32 @@
 [
   {
     "_id": "1",
-    "content": "# Hallo \n world \n * eh \n * eh",
+    "content": "## Drag and Drop  \n * dnd-kit \n * react-beautiful-dnd \n * react-dnd",
     "status": "Backlog"
   },
   {
     "_id": "2",
-    "content": "# Hallo \n world \n * eh \n * eh",
+    "content": "## DELETE functionality \n * board component holds data",
     "status": "Backlog"
   },
   {
     "_id": "3",
-    "content": "# Hallo \n world \n * eh \n * eh",
+    "content": "## ADD functionality \n * board component holds data",
     "status": "Backlog"
+  },
+  {
+    "_id": "4",
+    "content": "## MODIFY functionality \n * board component holds data \n * MD rendering",
+    "status": "Backlog"
+  },
+  {
+    "_id": "5",
+    "content": "## NAVBAR \n * board component holds data \n * MD rendering",
+    "status": "Doing"
+  },
+  {
+    "_id": "6",
+    "content": "## FOOTER \n * Github link \n * at the buttom of the page",
+    "status": "Doing"
   }
 ]

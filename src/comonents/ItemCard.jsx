@@ -1,4 +1,4 @@
-import "./ItemCard.css";
+// import "./ItemCard.css";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useState, useEffect } from "react"; 
@@ -38,12 +38,12 @@ const ItemCard = ({ item, deleteCard, edit }) => {
         className="DeleteBtn"
         src="src/assets/garbage.png"
         alt="delete"
-        style={{ width: "20px", position: "relative", left: "90%" }}
+        style={{ width: "20px", position: "relative", left: "96%" }}
         onClick={() => deleteCard(item._id)}
       />
 
       {!isEditing && (
-        <div className="ItemCardContent" >
+        <div className="ItemCardContent" style={{paddingLeft: "25px"}} >
           <Markdown remarkPlugins={[remarkGfm]}>{item.content}</Markdown>
         </div>
       )}

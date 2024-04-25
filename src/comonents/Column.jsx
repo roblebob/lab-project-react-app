@@ -1,6 +1,7 @@
 import "./Column.css";
 import { v4 as uuidv4 } from "uuid";
 import ItemCard from "./ItemCard";
+import colorTheme from "../colorTheme.jsx";
 
 const Column = ({ data, name, color, addCard, deleteCard, edit }) => {
   const submitCard = () => {
@@ -43,6 +44,9 @@ const Column = ({ data, name, color, addCard, deleteCard, edit }) => {
           bottom: "0%",
           backgroundColor: color,
           margin: "5px",
+          border: "none",
+          color: colorTheme.primary,
+          fontWeight: "bold",
         }}
       >
         +
