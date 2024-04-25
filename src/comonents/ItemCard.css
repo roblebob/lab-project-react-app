@@ -1,14 +1,19 @@
-.ItemCard {
+/* .ItemCard {
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column; 
 
   width: 80%;
   height: auto;
   padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: #fff; 
   margin-bottom: 5px;
+  text-align: left;
+} */
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }

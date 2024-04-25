@@ -1,13 +1,13 @@
 import "./Column.css";
+import { v4 as uuidv4 } from 'uuid';
 import ItemCard from "./ItemCard";
 
-const Column = ({ data, name, color, addCard, deleteCard }) => {
+const Column = ({ data, name, color, addCard, deleteCard, edit }) => {
   const submitCard = () => {
     addCard({
-      _id: Math.ceil(Math.random() * 1000),
-      title: "New Card",
+      _id: uuidv4(), 
       status: name,
-      comments: [],
+      content: "",
     });
   };
 
@@ -17,7 +17,7 @@ const Column = ({ data, name, color, addCard, deleteCard }) => {
       {data.length !== 0 &&
         data.map((item) => {
           return (
-            <ItemCard key={item._id} item={item} deleteCard={deleteCard} />
+            <ItemCard key={item._id} item={item} deleteCard={deleteCard} edit={edit}/>
           );
         })}
       <button className="AddCard" onClick={submitCard}>

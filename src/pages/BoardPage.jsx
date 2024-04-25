@@ -8,14 +8,15 @@ import { v4 as uuidv4 } from "uuid";
 const BoardPage = () => {
   const [data, setData] = useState(dataDefault);
 
-  const addCard = (item) => {
-    item = { ...item, _id: uuidv4() };
-    console.log(item);
-    setData([...data, item]);
-  };
+  const addCard = (item) => setData([...data, item]);
+  
   const deleteCard = (id) => setData(data.filter((item) => item._id !== id));
-  const update = (id, newStatus) =>
-    setData((data.filter((item) => item._id === id)["status"] = newStatus));
+
+  const edit = (id, content) => {
+    //const content = document.querySelector(`.ItemCardInputTextArea${id}`).value;
+    const obj = data.find((item) => item._id === id);
+    obj.content = content;
+  };
 
   return (
     <div className="Board">
@@ -29,6 +30,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Backlog")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
         <Column
           name="Doing"
@@ -36,6 +38,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Doing")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
         <Column
           name="Review"
@@ -43,6 +46,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Review")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
         <Column
           name="Done"
@@ -50,6 +54,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Done")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
       </div>
     </div>
