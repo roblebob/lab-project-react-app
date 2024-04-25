@@ -14,7 +14,7 @@ const Column = ({ data, name, color, addCard, deleteCard, edit }) => {
   return (
     <div>
       <div className="Column" style={{ backgroundColor: color }}>
-        <h2>{name}</h2>;
+        <h2>{name}</h2>
         {data.length !== 0 &&
           data.map((item) => {
             return (
