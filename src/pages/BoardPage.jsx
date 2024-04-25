@@ -13,18 +13,14 @@ const BoardPage = () => {
   const deleteCard = (id) => setData(data.filter((item) => item._id !== id));
 
   const edit = (id, content) => {
-    //const content = document.querySelector(`.ItemCardInputTextArea${id}`).value;
     const obj = data.find((item) => item._id === id);
     obj.content = content;
   };
 
   ////////////////////////////////////////////////////////////////////////////////
-
   const [draggingTask, setDraggingTask] = useState(null);
 
-  //////
-
-
+  
   useEffect(() => {
     const handleDragStart = (e) => {
       setDraggingTask(e.target);
@@ -50,7 +46,7 @@ const BoardPage = () => {
       }
     };
 
-    //////////////////////////////////
+    //////
     const draggables = document.querySelectorAll(".ItemCard");
     draggables.forEach((task) => {
       task.addEventListener("dragstart", handleDragStart);
@@ -62,9 +58,9 @@ const BoardPage = () => {
       zone.addEventListener("dragover", handleDragOver);
     });
 
-    //////////////////////////////////
+    //////// Clean up
     return () => {
-      // Clean up
+      
       draggables.forEach((task) => {
         task.removeEventListener("dragstart", handleDragStart);
         task.removeEventListener("dragend", handleDragEnd);
