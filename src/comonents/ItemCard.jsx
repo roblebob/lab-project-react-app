@@ -14,6 +14,7 @@ const ItemCard = ({ item, deleteCard, edit }) => {
   return (
     <div
       className="ItemCard"
+      draggable="true"
       style={{
         display: "flex",
         flexDirection: "column", 
