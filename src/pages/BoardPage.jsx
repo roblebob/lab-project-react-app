@@ -38,6 +38,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Doing")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
         <Column
           name="Review"
@@ -45,6 +46,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Review")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
         <Column
           name="Done"
@@ -52,6 +54,7 @@ const BoardPage = () => {
           data={data.filter((item) => item.status === "Done")}
           addCard={addCard}
           deleteCard={deleteCard}
+          edit={edit}
         />
       </div>
     </div>
