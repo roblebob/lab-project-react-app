@@ -36,7 +36,7 @@ const ItemCard = ({ item, deleteCard, edit }) => {
     >
       <img
         className="DeleteBtn"
-        src="src/assets/garbage.png"
+        src="public/garbage.png"
         alt="delete"
         style={{ width: "20px", position: "relative", left: "96%" }}
         onClick={() => deleteCard(item._id)}
