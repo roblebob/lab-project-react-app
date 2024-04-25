@@ -1,0 +1,21 @@
+1: he changes the app.jsx
+	- detectioncollision
+
+
+
+
+
+7777777777777777
+data = task
+item = tasks
+setData = setTasks
+
+
+
+///////////////////////
+classes:
+-todo-form = task-form;
+-todo-input = task-input;
+-lanes = column-container;
+-.swim-lane = task-container;
+

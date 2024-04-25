@@ -1,8 +1,10 @@
+import "./AboutPage.css";
+
 const AboutPage = () => {
   return (
-    <div>
-      <h1>About Us - Team Corporation</h1>
-      <p>
+    <div id="aboutpage">
+      <h1 id="about-header">About Us - Team Corporation</h1>
+      <p id="about-content">
         At Team Corporation, we are a group of aspiring web developers dedicated
         to mastering our craft and delivering exceptional digital solutions to
         the market. With a passion for innovation and a commitment to continuous

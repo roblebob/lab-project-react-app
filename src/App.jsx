@@ -7,6 +7,7 @@ import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 
 import { Routes, Route } from "react-router-dom";
+import BoardT from "./pages/BoardT";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/board" element={<BoardPage />} />
+        {/* <Route path="/board" element={<BoardPage />} /> */}
+        <Route path="/board" element={<BoardT />} />
         <Route path="/detail" element={<DetailPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<ErrorPage />} />

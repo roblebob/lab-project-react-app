@@ -1,0 +1,15 @@
+#aboutpage {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 60px;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 2;
+}
+
+#about-content {
+  font-size: 1.2rem;
+  width: 65%;
+  margin-top: 5%;
+}
